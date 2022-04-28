@@ -1,0 +1,351 @@
+
+/* Fonts style */
+
+
+@font-face {
+    font-family: 'Calibri-Bold';
+    src: url('../fonts/Calibri-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/Calibri-Bold.woff') format('woff'), url('../fonts/Calibri-Bold.ttf')  format('truetype'), url('../fonts/Calibri-Bold.svg#Calibri-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../fonts/Calibri.eot?#iefix') format('embedded-opentype'),  url('../fonts/Calibri.woff') format('woff'), url('../fonts/Calibri.ttf')  format('truetype'), url('../fonts/Calibri.svg#Calibri') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'CircularStd-Bold';
+    src: url('../fonts/CircularStd-Bold.eot?#iefix') format('embedded-opentype'),  url('../fonts/CircularStd-Bold.otf')  format('opentype'), url('../fonts/CircularStd-Bold.woff') format('woff'), url('../fonts/CircularStd-Bold.ttf')  format('truetype'), url('../fonts/CircularStd-Bold.svg#CircularStd-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+
+
+/* // End Fonts style */
+
+
+
+
+
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+ul{ 
+    list-style: none;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+.clear:after{content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+a img{
+    border:0;
+}
+a,input,select,textarea{
+    outline:none;
+}
+input::-moz-focus-inner{
+    border:0; padding: 0;
+}
+
+img{
+    float: left;
+}
+
+/* Selection colours (easy to forget) */
+
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+a{text-decoration: none; display: inline-block;}
+/*a:hover{text-decoration: underline; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}*/
+
+
+
+/*		Default Layout 
+-------------------------------------------------------------------------------
+*/
+
+body {background: rgb(255,255,255); color: #363636; -webkit-text-size-adjust: 100%; -moz-text-size-adjust:100%; -moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased; overflow-x: hidden; overflow-y:auto; font-size: 16px; line-height: 20px; font-family: 'Calibri'; font-weight: normal; font-style: normal;}
+
+*{-webkit-box-sizing: border-box;-moz-box-sizing:border-box; box-sizing: border-box;}
+
+
+.main-wrap, header, section, footer, nav, .logo-wrap, .main-nav ul, .accommodation-content-wrap{float: left; width: 100%;}
+.common-wrap{max-width: 1200px; padding: 0 15px; margin: 0 auto; clear: both;}
+h1,h4,h3{font-size: 43px; line-height: 45px; color: #ffffff; font-weight: normal; font-family: 'CircularStd-Bold';}
+h3{font-size: 26px; line-height: 30px; color: #003811;}
+h4{font-size: 22px; line-height: 29px; color: #003811;}
+h5{font-size: 20px; line-height: 24px; font-weight: normal;}
+
+.header-section{position: absolute; left: 0; top: 0; background: transparent; z-index: 9999;}
+.header-inner{max-width: 1260px; margin: 0 auto; padding: 0 15px; clear: both; position: relative;}
+.logo-wrap{padding-top: 34px;}
+.main-logo{max-width: 357px; margin: 0 auto; clear: both; overflow: hidden;}
+.main-logo img{width: 100%;}
+.main-logo a{display: block;}
+.phone-nav{position: absolute; right: 15px; top: 12px; width: 23px; display: none;}
+.phone-nav div{float: left; width: 23px; height: 2px; margin: 3px 0; background: #ffffff;}
+
+.main-nav ul{text-align: center;}
+.main-nav ul li{display: inline-block; margin: 13px 15px;}
+.main-nav ul li a{display: block; padding: 5px 0px; color: #ffffff; font-size: 15px; line-height: 18px; text-transform: uppercase; position: relative; letter-spacing: 1.2px;}
+
+.main-nav ul li a:after{position: absolute; content: ""; left: 0; bottom: 0; width: 100%; height: 1px; background: #ffffff; opacity: 0; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+
+.main-nav ul li a:hover:after, .main-nav ul li.active a:after{opacity: 1; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+
+.booking-btn{position: absolute; right: 15px; top: 53px; margin: 0 !important;}
+.booking-btn a{width: 117px; height: 37px; border: 2px solid #a5c8eb; border-radius: 4px; line-height: 35px !important; padding: 0 !important;}
+.booking-btn a:hover{background: #a5c8eb; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+.main-nav ul li.booking-btn a:hover:after{opacity: 0;}
+
+.hero_section{position: relative;}
+.hero_section img{width: 100%;}
+
+.hero-content{position: absolute; left: 0; bottom: 107px; width: 100%; text-align: center; z-index: 3;}
+.hero-content .common-wrap{max-width: 525px; padding: 0;}
+.hero-content p{color: #ffffff; float: left; width: 100%; padding-top: 5px;}
+
+.home-hero .hero-content{bottom: 41%;}
+.home-hero .hero-content .common-wrap{max-width: 1170px;}
+
+.accommodation_section{background: #ffffff; padding: 70px 0 0;}
+.lead-text{max-width: 735px; margin: 0 auto; clear: both; overflow: hidden; text-align: center; font-size: 20px; line-height: 31px; color: #252525; }
+.lead-text a{color: #003811; text-decoration: underline; font-family: 'Calibri-Bold'; font-weight: normal;}
+.lead-text a:hover{text-decoration: none;}
+
+.accommodation-content-wrap{padding-top: 97px;}
+.accommodation-headeing{float: left; width: 25.38461538461538%; padding: 60px 24px 0;}
+.accommodation-headeing-inner{float: left; max-width: 190px;}
+.accommodation-headeing-inner p{float: left; width: 100%; padding-top: 20px; color: #4c4c4c;}
+
+.accommodation-figure{float: left; width: 41.70940170940171%; position: relative;}
+.figure-slider, .slides, .slide, .slide img{float: left; width: 100%;}
+.bird-left{position: absolute; left: -109px; bottom: 30px; z-index: 6;}
+.bird-right{position: absolute; right: -95px; top: 40px; z-index: 6;}
+
+.flex-control-nav{background: transparent; left: auto; right: 15px; bottom: 10px; margin: 0; min-width: 10px; height: auto; -webkit-border-radius: 0; border-radius: 0;}
+.flex-control-nav li{margin: 0 3px; width: 9px; height: 9px;}
+.flex-control-paging li a{background: transparent; border: 1px solid #ffffff; border-radius: 50px; width: 9px; height: 9px;}
+.flex-control-paging li a.flex-active, .flex-control-paging li a:hover{background: #ffffff;}
+
+.accommodation-feature{float: left; width: 23.84615384615385%; margin-left: 9.05982905982906%; padding-top: 43px;}
+.single-feature{float: left; width: 100%; padding-top: 20px;}
+.single-feature span{display: block; color: #003811; font-family: 'Calibri-Bold'; font-weight: normal;}
+.single-feature p{float: left; width: 100%;}
+
+.retreats_section{margin-top: 92px; position: relative;}
+.retreats_section img{width: 100%;}
+.retreats-contetn{position: absolute; left: 0; width: 100%; height: 100%; top: 0; z-index: 4; padding-top: 95px; background: rgba(0, 0, 0, .10); text-align: center;}
+.retreats-contetn h5{padding-top: 10px; float: left; width: 100%;}
+.explore-btn{color: #003811; font-size: 13px; line-height: 32px; margin-top: 25px; text-transform: uppercase; width: 212px; height: 36px; border: 2px solid #728e7b; border-radius: 5px; font-family: 'Calibri-Bold'; font-weight: normal; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; letter-spacing: 1.2px;}
+.explore-btn:hover{background: #728e7b; color: #ffffff; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+
+.main-footer-section{padding-top: 45px; padding-bottom: 20px;}
+.footer-nav, .footer-nav ul{float: left; width: 100%; text-align: center;}
+.footer-nav ul li{display: inline-block; margin: 0 15px;}
+.footer-nav ul li a{display: block; color: #003811; text-transform: uppercase; font-size: 15px; line-height: 18px; }
+.footer-nav ul li a:hover{text-decoration: underline;}
+
+.copy-right-text{float: left; width: 100%; padding-top: 20px; text-align: center; font-size: 13px;}
+
+
+
+/* Retreats page style */
+.retreats-hero:after{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .20); content: "";}
+.main_content_section{padding-top: 70px;}
+.blog-content-wrap{max-width: 852px; margin: 0 auto; clear: both; padding-top: 55px;}
+.content-row{float: left; width: 100%; display: -webkit-flex; display: -webkit-box; display: -moz-box; display: -ms-flexbox; display: flex; -webkit-flex-flow: row wrap; flex-flow: row wrap; padding-top: 32px;}
+.content-figure{-webkit-flex: 1 50%; flex: 1 50%;}
+.content-figure{float: left; width: 50%; padding-right: 13px; position: relative; -webkit-order: 1; order: 1;}
+.content-figure img{width: 100%;}
+.content-figure .bird-wrap{position: absolute; left: -73px; top: 30px; max-width: ;}
+.content-inner{-webkit-order: 2; order: 2; -webkit-flex: 1 50%; flex: 1 50%; float: left; width: 50%; padding-left: 53px; position: relative; padding-top: 65px; padding-bottom: 95px;}
+.content-inner p{color: #464646; padding-top: 20px; float: left; width: 100%;}
+.content-inner p.time-costs{color: #003811; font-family: 'Calibri-Bold'; font-weight: normal;}
+.content-inner p.time-costs span{display: block;}
+.book-btn{position: absolute; left: 53px; bottom: 40px; width: 117px; height: 36px; line-height: 32px; text-transform: uppercase; font-size: 13px; color: #003811; font-family: 'Calibri-Bold'; font-weight: normal; border: 2px solid #7f9b88; text-align: center; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; border-radius: 5px;}
+
+.book-btn:hover{background: #7f9b88; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; color: #ffffff;}
+
+.content-row:nth-child(even) .content-figure{-webkit-order: 2; order: 2; padding-left: 13px; padding-right: 0;}
+.content-row:nth-child(even) .content-figure .bird-wrap{left: auto; right: -73px; top: 35px;}
+.content-row:nth-child(even) .content-inner{-webkit-order: 1; order: 1; padding-right: 53px; padding-left: 55px;}
+.content-row:nth-child(even) .book-btn{left: 55px;}
+
+
+.booking_section{position: relative; margin-top: 109px;}
+.booking_section img{width: 100%;}
+.retreats-contetn h3, .retreats-contetn h5{color: #ffffff;}
+.book-retreat-btn{border: 2px solid #d1dcea; border-radius: 5px; color: #ffffff; width: 191px; height: 36px; line-height: 32px; text-transform: uppercase; font-family: 'Calibri-Bold'; font-weight: normal; margin-top: 20px; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out; letter-spacing: 1.2px;}
+.book-retreat-btn:hover{background: #d1dcea; color: #003811; -webkit-transition: all .2s ease-in-out; -moz-transition: all .2s ease-in-out; transition: all .2s ease-in-out;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =======================================================================================================
+============================================ Responsive style ========================================== */
+
+/*		Mobile Layout: 320px and 480px and more but less than or equal to 767px.
+----------------------------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    input[type="text"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    h1{font-size: 23px; line-height: 32px;}
+    h3{font-size: 19px;}
+    h5, h4{font-size: 18px; line-height: 22px;}
+    
+    .header-section{position: fixed; top: 1px; margin-top: -1px;}
+    .header-inner{padding: 0;}
+    .logo-wrap{padding: 0; background: #3D83CB;}
+    .main-logo{max-width: 150px; padding: 10px 0; margin-left: 15px;}
+    .phone-nav{display: block;}
+    
+    .main-nav{padding: 15px 0; background: #3b7ab0; display: none;}
+    .main-nav ul li{display: block; margin: 4px 0;}
+    .main-nav ul li a{display: inline-block;}
+    .booking-btn{position: relative; left: auto; right: auto; top: auto; margin-top: 15px !important;}
+    
+    .hero_section{margin-top: 47.7px;}
+    .home-hero .hero-content, .hero-content{bottom: auto; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); transform: translateY(-50%); padding: 0 15px;}
+    
+    .accommodation_section{padding-top: 30px;}
+    .accommodation-content-wrap{padding-top: 0;}
+    .accommodation-headeing{width: 100%; padding: 30px 0;}
+    .accommodation-headeing-inner{float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .accommodation-figure{float: none; max-width: 485px; width: 100%; margin: 0 auto; clear: both; padding-top: 0px;}
+    .accommodation-feature{width: 100%; margin: 0;}
+    .accommodation-headeing-inner p{padding-top: 10px;}
+    .bird-left, .bird-right{max-width: 90px; margin-left: 69px; display: none;}
+    .bird-left img, .bird-right img{width: 100%;}
+    .bird-right { right: -65px; max-width: 55px; }
+    .accommodation-feature{padding-top: 15px;}
+    
+    .retreats_section{margin-top: 30px;}
+    .retreats-contetn{float: left; width: 100%; position: relative; left: auto; right: auto; top: auto; padding-top: 25px; background: transparent;}
+    .retreats-contetn h5{padding-top: 4px;}
+    .explore-btn{margin-top: 15px;}
+    
+    .main-footer-section{padding-top: 30px;}
+    .footer-nav ul li{display: block; margin: 7px 0;}
+    .lead-text{font-size: 18px; line-height: 24px;}
+    .copy-right-text{padding-top: 15px;}
+    
+    .hero_section:after{position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, .2); content: "";}
+    .main_content_section{padding-top: 30px;}
+    .blog-content-wrap{padding-top: 0px;}
+    .content-row{display: block;}
+    .content-figure, .content-row:nth-child(even) .content-figure{float: none; max-width: 413px; width: 100%; margin: 0 auto; clear: both; overflow: hidden; padding: 0;}
+    .content-inner, .content-row:nth-child(even) .content-inner{width: 100%; padding: 0; padding-top: 20px; }
+    .bird-wrap{display: none;}
+    .content-inner p{padding-top: 10px;}
+    .book-btn, .content-row:nth-child(even) .book-btn{left: auto; bottom: auto; position: relative; margin-top: 20px;}
+    .booking_section{margin-top: 30px;}
+    .retreats-contetn h3, .book-retreat-btn{color: #003811;}
+    .retreats-contetn h5{color: #464646;}
+
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    .footer-nav ul li{display: inline-block; margin: 0px 10px;}
+
+}
+
+
+/*		Tablet Layout: 768px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    input[type="text"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+    
+    h1{font-size: 35px;}
+    .home-hero .hero-content{bottom: 20%;}
+    
+    .accommodation-content-wrap{padding-top: 50px;}
+    .accommodation-headeing{width: 100%; padding: 0; text-align: center;}
+    .accommodation-headeing-inner{float: none; margin: 0 auto; clear: both; overflow: hidden;}
+    .accommodation-figure{float: none; max-width: 485px; margin: 0 auto; clear: both; padding-top: 30px;}
+    .accommodation-feature{width: 100%; margin: 0;}
+    .single-feature{width: 33.3333333333333%; padding-right: 10px;}
+    .single-feature:last-child{padding-right: 0;}
+    
+    .retreats_section{margin-top: 50px;}
+    .retreats-contetn{padding-top: 45px;}
+	
+}
+
+
+/*		Tablet Layout: 1024px.
+-----------------------------------------------------------------
+*/
+
+@media only screen and (min-width: 992px) and (max-width: 1024px) {
+    input[type="text"],input[type="submit"],input[type="password"],select,textarea{-webkit-appearance:none;-moz-appearance:none;appearance:none; border-radius: 0}
+	
+}
+
+
+
+
+/*	Retina media query.
+	Overrides styles for devices with a 
+	device-pixel-ratio of 2+, such as iPhone 4.
+-----------------------------------------------    */
+
+@media 
+	only screen and (-webkit-min-device-pixel-ratio: 2),
+	only screen and (min-device-pixel-ratio: 2) {
+	
+	
+}
+
+
+
+
+
+
+
